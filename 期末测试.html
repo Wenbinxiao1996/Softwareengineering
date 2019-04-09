@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小学生四则运算</title>
+ 
+    <!-- <script src="/weiguangzhi/Bootstrap/jquery-1.12.4.js"></script>
+    <script src="/weiguangzhi/Bootstrap/bootstrap.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css.css"/>
+
+</head>
+<body>
+    <div id="header">
+            <h1>小学生四则运算</h1>
+
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li class="active"><a href="/">主页</a></li>
+                <li><a href="/store">商店</a></li>
+                    <li><a href="/account/login"> 登录 </a></li> -->
+            </ul>
+            
+        
+     </div>
+     <div class="container">
+    
+            <div class="row">
+                
+                <div class="col-md-3">
+                    
+                    
+                    <ul id="categories">
+                <div id="divWeather"></div>
+            </li>
+            </ul>
+                </div>
+                <div class="col-md-9">
+                    
+        
+        
+        <div id="promotion">
+        </div>
+        <p style="left:320px;position:absolute;top:150px; font-weight:bold;font-size: 16px;"> 考试时间：</p>
+         <button type="button" style="width:200px;left:450px;position:absolute;top:135px;
+                  width: 100px; /* 宽度 */
+	height: 40px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+    font-size: 16px; /* 字体大小 */">打印题目</button> 
+    
+    <!-- <button type="button" style="width:200px;left:600px;position:absolute;top:135px;
+                  width: 100px; /* 宽度 */
+	height: 40px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+    font-size: 16px; /* 字体大小 */">打印题目</button> -->
+    
+    <button type="button" style="width:200px;left:720px;position:absolute;top:135px;
+                  width: 100px; /* 宽度 */
+	height: 40px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+    font-size: 16px; /* 字体大小 */">分享成绩</button>
+    
+    <button type="button" style="width:200px;left:880px;position:absolute;top:135px;
+                  width: 100px; /* 宽度 */
+	height: 40px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 16px; /* 字体大小 */">交卷</button>
+        
+        <textarea rows="10" cols="30" style="width:661px;height:208px;position:absolute; top:180px;resize:none;border: 2px solid gray;">
+            <!--此处为文本框-->
+            </textarea>
+
+            <div class="row">
+                <div class="col-md-12">
+                     <div id="footer">
+             <ul style="list-style:none;">
+                 <li  style="display:inline-block;">
+                     <!-- <img src="http://crp.lzzy.net/oa/login_images/login_logo.png" style="height:25px" /> -->
+                 </li>
+                 <li style="display:inline-block;">
+                      2018-2019, CopyRight By<a href="#">软工一组</a>
+                 </li>
+             </ul>
+         </div>
+                </div>
+            </div>   
+            
+        </div>
+        
+        </body>
+        </html>
+        
+        <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=emKzTIR8orgFMUjXFLjgU1IT"></script>
+        <script>
+            // 定位
+            var geolocation = new BMap.Geolocation();
+            geolocation.getCurrentPosition(function (r) {
+                if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                    Lng = r.point.lng;
+                    Lat = r.point.lat;
+                    console.log(r);
+                    if (r.address.district !== "") {
+                        document.getElementById('district').innerText = r.address.district;
+                    }
+                    if (r.address.city !== "") {
+                        document.getElementById('city').innerText = r.address.city;
+                        $.ajax({
+                            url: "../home/GetWeather",
+                            data: { city: r.address.city },
+                            datatype: "json",
+                            type: "post",
+                            success: function (data) {
+                                $("#divWeather").html(data);
+                            }
+                        });
+                    }
+                    else {
+                        document.getElementById('city').innerText = "柳州市";
+                        $.ajax({
+                            url: "../home/GetWeather",
+                            data: { city: "柳州市" },
+                            datatype: "json",
+                            type: "post",
+                            success: function (data) {
+                                $("#divWeather").html(data);
+                            }
+                        });
+                    }
+                }
+                else {
+                    document.getElementById('city').innerText = "定位失败";
+                }
+            }, { enableHighAccuracy: true });
+        </script>
+         -->
